@@ -1,0 +1,12 @@
+1.identify the plan type(PDP,MAPD,MAON) from the source data dst_mrx and dst_data
+PART D Process:
+2. process the data if exist in both dst_mrx and dst_data sets by outputting pbp_file_partd. Process data at the hplan grouping level. Again pbp_file_partd is
+merged with dst_mrx and pbp_mrx dataset will be generated
+3. source data dst_mrx_p will be merged with the above data set pbp_file_partd (the output is pbp_mrx_p)
+4. source data dst_mrx_tier will be merged with the above data set pbp_file_partd and deriving PLAN_COPAY,PLAN_COINS, HPLAN by 
+grouping the data BY HPLAN MRX_TIER_ID, MRX_TIER_TYPE_ID(output is pbp_t)
+5. Then process the data at the plan level
+6. plan_formulary dataset will be read and merged with PBP MRX data and the output is arranged at formulary_id group level (output is mrx_file)
+
+7. also pbp_medigap data will be merged with pbp data and the output data will be arranged at hplan level(output is PBP_File)
+
